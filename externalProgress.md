@@ -1,3 +1,6 @@
+## IN EVENT OF BUG, CHECK THESE:
+- use exacty versions of dependencies from library
+
 ### Organization: 
 - trello board: https://trello.com/b/RZ5w1kKV/raiser-app
 - working on component diagram
