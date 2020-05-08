@@ -26,3 +26,6 @@
     - I dont want to be reliant on their end working
     - ran into issues with them before
     - I'll feel really good about figuring out how to do this myself
+
+4. Looking into MongoDB (aka MERN stack)
+   - https://dev.to/rexeze/how-to-build-a-real-time-chat-app-with-nodejs-socketio-and-mongodb-2kho
