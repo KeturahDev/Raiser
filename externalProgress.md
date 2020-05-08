@@ -30,3 +30,4 @@
 4. Looking into MongoDB (aka MERN stack)
    - https://dev.to/rexeze/how-to-build-a-real-time-chat-app-with-nodejs-socketio-and-mongodb-2kho
    - watching: https://www.youtube.com/watch?v=pWbMrx5rVBE&t=29s and taking notes
+   - begin following tutorial of first link in this list
