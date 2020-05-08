@@ -18,10 +18,11 @@ const socket = io(http);
 
 //To listen to messages
 socket.on("connection", (socket)=>{
-
-console.log("user connected", socket);
+  console.log("user connected");
+  socket.on("disconnect", ()=>{
+    console.log("Disconnected")
+  })
 });
-
 //wire up the server to listen to our port 500
 http.listen(port, ()=>{
 console.log("connected to port: " + port)
