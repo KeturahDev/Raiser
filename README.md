@@ -3,7 +3,12 @@
 
 ## Description
 
-Tag along application intended to assist teachers and students interact through raising hands and answersing polls while teachers giving lectures online. 
+Tag along application intended to assist teachers and students interact through raising hands and answering polls while teachers give lectures online. 
+
+### Component Diagram
+
+![Screen Shot 2020-05-08 at 10 38 28 AM](https://user-images.githubusercontent.com/32975967/81432680-33a64a00-9118-11ea-8ca4-84bc339a836b.png)
+
 
 ### User Stories
 Lecture Mode
