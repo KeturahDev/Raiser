@@ -35,3 +35,5 @@
    - watching: https://www.youtube.com/watch?v=pWbMrx5rVBE&t=29s and taking notes
    - begin following tutorial of first link in this list
    - following along with tutorials repo, downloading, trying to get it to work, taking a very long time, tryin gto download mongodb in order to see if tutorials repo works.
+
+5. End of day: never finsihed tutorial... poorly explained for learning basics. New Plan: follow udemy download MongoDb lecture (10-20 min), follow Socket.io tutorial ONLY, then express ONLY.. then attemt at putting it all together. Aim to finish tutorials over weekend instead of on captstone days. 
