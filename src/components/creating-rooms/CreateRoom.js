@@ -13,7 +13,7 @@ function CreateRoom(){
   return(
     <div style={{border: "2px solid purple"}}>
       <h2>Adding a Room!</h2>
-      <GeneratePin pin={number} geratePin={getNumber}/>
+      <GeneratePin pin={number} generatePin={getNumber}/>
       <Form />
       <Confirmation />
     </div>
