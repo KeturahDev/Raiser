@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Header from './Header';
 import JoinForm from './JoinForm';
-import CreateRoom from './CreateRoom'
+import CreateRoom from './creating-rooms/CreateRoom'
 
 function Splash() {
   const [visibleChild, changeVisChild] = useState("join")
