@@ -1,16 +1,21 @@
 ## IN EVENT OF BUG, CHECK THESE:
 - use exacty versions of dependencies from library
 
+## MAY 15th
+- scrap tutorial, begin working on creating rooms with node, express, and mongo db
+    - create components for form and forms parents
+    - follow tutorial to learn how to save things from react to mongo db vie Node.js with Express 
+    - consider state? redux or hooks? what will be stateful?
+
+thoughts along the way
+- authorization library? just for password creation -- no
+
+
 ### Organization: 
 - trello board: https://trello.com/b/RZ5w1kKV/raiser-app
 - working on component diagram
 - still working on component diagram, covering many details of full application
 
-MAY 15th
-- scrap tutorial, begin working on creating rooms with node, express, and mongo db
-    - create components for form and forms parents
-    - follow tutorial to learn how to save things from react to mongo db vie Node.js with Express 
-    - consider state? redux or hooks? what will be stateful?
 
 ### Researching Websockets:
 1. looking at list of options: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API

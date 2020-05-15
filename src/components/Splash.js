@@ -12,8 +12,8 @@ function Splash() {
     } else if (visibleChild === "new") {
       changeVisChild("join")
     }
-    console.log("toggled to: ", visibleChild)
   }
+
   const renderingChild = () => {
     if(visibleChild === "join") {
       return {
@@ -27,6 +27,7 @@ function Splash() {
       }
     }
   }
+  
   const renderedChild = renderingChild()
   return(
     <div style={{border: "2px solid blue"}}>

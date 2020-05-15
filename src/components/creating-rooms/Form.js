@@ -11,6 +11,7 @@ function Form(props){
       props.onSubmitPassword(event.target.pwd.value)
     }
   }
+
   return(
     <div style={{border: "2px solid green"}}>
       <form onSubmit={handleSubmitForm}>
@@ -21,8 +22,9 @@ function Form(props){
     </div>
   )
 }
+
 Form.propTypes = {
-  // pin: PropTypes.number
   onSubmitPassword: PropTypes.func
 }
+
 export default Form;
