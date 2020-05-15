@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function GeneratePin(){
-  //function with Math.random to generate 6 digit long pin
+  const [number, changeNumber] = useState(Math.floor(10000 + Math.random() * 90000))
+  
+  function getNumber(){
+    const newNum = Math.floor(10000 + Math.random() * 90000)
+    changeNumber(newNum)
+  }
+
   return(
     <div style={{border: "2px solid yellow"}}>
-      <p>Here will be a randomply generated pin</p>
-      <p>button to regenerate it?</p>
+      <p>Your Pin is: {number}</p>
+      
+      {/* <p>button to regenerate it?</p> */}
+      <button onClick={() => getNumber()}>New pin please!</button>
     </div>
   )
 }
