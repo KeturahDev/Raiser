@@ -15,7 +15,7 @@ function CreateRoom(){
       <h2>Adding a Room!</h2>
       <GeneratePin pin={number} generatePin={getNumber}/>
       <Form />
-      <Confirmation />
+      <Confirmation pin={number}/>
     </div>
   )
 }
