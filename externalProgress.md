@@ -10,6 +10,8 @@
 thoughts along the way
 - authorization library? just for password creation -- no
 
+1. Learning about node servers: https://www.youtube.com/watch?v=VShtPwEkDD0
+2. Researching how to connect to mongodb with node server: https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729150#overview
 
 ### Organization: 
 - trello board: https://trello.com/b/RZ5w1kKV/raiser-app
