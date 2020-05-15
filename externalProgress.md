@@ -7,11 +7,13 @@
     - follow tutorial to learn how to save things from react to mongo db vie Node.js with Express 
     - consider state? redux or hooks? what will be stateful?
 
+
 thoughts along the way
 - authorization library? just for password creation -- no
 
 1. Learning about node servers: https://www.youtube.com/watch?v=VShtPwEkDD0
 2. Researching how to connect to mongodb with node server: https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729150#overview
+3. Attempt following along tutorials. [Repo to follow alongs](https://github.com/KeturahDev/node-server/tree/master/MERN)
 
 ### Organization: 
 - trello board: https://trello.com/b/RZ5w1kKV/raiser-app
