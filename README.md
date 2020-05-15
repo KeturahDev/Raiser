@@ -9,6 +9,8 @@ Tag along application intended to assist teachers and students interact through 
 
 ![Screen Shot 2020-05-08 at 10 38 28 AM](https://user-images.githubusercontent.com/32975967/81432680-33a64a00-9118-11ea-8ca4-84bc339a836b.png)
 
+Organizational planning process: *[Trello Board](https://trello.com/b/RZ5w1kKV/raiser-app)* 
+
 
 ## User Stories
 * As a teacher, I want to begin a lecture room, where I can host a virtual room that my students can join and raise their hand/respond to my polls during my lecture in live time, so that I can receive feedback from all of my students in 1 sitting
@@ -56,6 +58,7 @@ As a student, I want to be able to respond to the polls by clicking a number on 
  * bluebird promise library
  * git
  * SCSS/CSS
+ * [Trello Board](https://trello.com/b/RZ5w1kKV/raiser-app)
  * VisualStudio Code 
 
  ## Known Bugs
