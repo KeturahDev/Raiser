@@ -1,21 +1,21 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
-function GeneratePin(){
-  const [number, changeNumber] = useState(Math.floor(10000 + Math.random() * 90000))
+function GeneratePin(props){
   
-  function getNumber(){
-    const newNum = Math.floor(10000 + Math.random() * 90000)
-    changeNumber(newNum)
-  }
 
   return(
     <div style={{border: "2px solid yellow"}}>
-      <p>Your Pin is: {number}</p>
+      <p>Your Pin is: {props.pin}</p>
       
       {/* <p>button to regenerate it?</p> */}
-      <button onClick={() => getNumber()}>New pin please!</button>
+      <button onClick={() => props.generatePin()}>New pin please!</button>
     </div>
   )
 }
 
+GeneratePin.propTypes ={
+  pin: PropTypes.number,
+  generatePin: PropTypes.func
+}
 export default GeneratePin;
