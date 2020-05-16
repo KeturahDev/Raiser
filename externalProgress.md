@@ -14,6 +14,7 @@ thoughts along the way
 1. Learning about node servers: https://www.youtube.com/watch?v=VShtPwEkDD0
 2. Researching how to connect to mongodb with node server: https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729150#overview
 3. Attempt following along tutorials. [Repo to follow alongs](https://github.com/KeturahDev/node-server/tree/master/MERN)
+4. Succeed in following udemy tutorial: repo [here](https://github.com/KeturahDev/Node-Mongo)... connected mongodb to node
 
 ### Organization: 
 - trello board: https://trello.com/b/RZ5w1kKV/raiser-app
