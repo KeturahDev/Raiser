@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import GeneratePin from './GeneratePin';
 import Form from './Form';
 import Confirmation from './Confirmation';
@@ -12,9 +12,24 @@ function CreateRoom(){
     changeNumber(newNum)
   }
   
+  const createRoomApiCall = (newRoom) => {
+    fetch('http://localhost:5000/rooms', 
+    {method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newRoom)})
+    .then(() => {
+      console.log("API::: successfully created room")
+    }).catch((e) => {
+      console.log("Unable to create new room: ", e)
+    })
+  }
+
   const makeRoom = (password) => {
     const newRoom = { roomPin: number, teacherPassword: password }
     console.log("Room to be saved: ", newRoom)
+    createRoomApiCall(newRoom)
     changeVisChildCR("confirm")
   }
 
