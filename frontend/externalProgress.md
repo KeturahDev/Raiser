@@ -7,6 +7,18 @@
     - follow tutorial to learn how to save things from react to mongo db vie Node.js with Express 
     - consider state? redux or hooks? what will be stateful?
 
+## MAY 18th
+
+- follow along udemy course in [this](https://github.com/KeturahDev/node-mongo-udemy) repo .. *will hold half of todays commit activity*
+    - currentlky on number 83 in this course
+    - passed 88, learning how to structure restful apis now
+    - created first rest api route! will now transition to applying content to this application/repo
+
+### todays goal:
+- finish course up to lesson 88 (currently on 80) / Structuring RESTful API in Node
+- create and make first insertion to Raisers MongoDB database
+
+
 
 thoughts along the way
 - authorization library? just for password creation -- no
