@@ -50,19 +50,24 @@ As a student, I want to be able to respond to the polls by clicking a number on 
     ```npm run start```
 
 ## Technologies Used for MVP
- * React
- * MongoDB
- * Mongoose
- * express
- * Node.js backend
- * Socket.io
- * git
- * SCSS/CSS
- * [Trello Board](https://trello.com/b/RZ5w1kKV/raiser-app)
- * VisualStudio Code 
- * Postman
+* React
+* MongoDB
+* Mongoose
+* express
+* Node.js backend
+* Socket.io
+* git
+* SCSS/CSS
+* [Trello Board](https://trello.com/b/RZ5w1kKV/raiser-app)
+* VisualStudio Code 
+* Postman
 
- ## Known Bugs
+## StretchGoals
+- error handling for trying to access non existant rooms on server-side
+- CORS handling on server-side instead of through chrome extension
+- 
+
+## Known Bugs
 
 _No known bugs at this time._
 

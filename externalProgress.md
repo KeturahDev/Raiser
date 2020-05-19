@@ -30,8 +30,8 @@ currently have working:
 
 whats next:
 - accurately fetch end point for posting pin to db X 
-- create GET endpoint in server, confirm effective <==
-- create join form components
+- create GET endpoint in server, confirm effective X
+- create join form components <==
 - allow users to join room! = MVP
 - ...
 - profit!
