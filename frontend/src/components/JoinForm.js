@@ -22,7 +22,7 @@ function JoinForm() {
       }
     } else {
       return {
-        component: <TypeOfUserForm />
+        component: <TypeOfUserForm gatherFormInputs={gatherFormInputs}/>
       }
     }
   }
