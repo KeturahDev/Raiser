@@ -5,31 +5,21 @@ import EnterRoom from './forms/EnterRoom'
 import TypeOfUserForm from './forms/TypeOfUserForm';
 
 function JoinForm() {
-
-  // const [membershipLable, switchMembershipLable] = useState("(please choose)")
-
+  
   const gatherFormInputs = (inputs) => {
-    console.log("recalled", inputs)
-    if (inputs) {
-      if (inputs.type === "student") {
-        return {
-          component: <EnterRoom studentName={inputs.studentName}/>
-        }
-      } else {
-        return {
-          component: <EnterRoom teacherPassword={inputs.teacherPassword}/>
-        }
-      }
+    if (inputs.type === "student") {
+      changeCurrentComponent(<EnterRoom studentName={inputs.studentName}/>)
+
     } else {
-      return {
-        component: <TypeOfUserForm gatherFormInputs={gatherFormInputs}/>
-      }
+      changeCurrentComponent(<EnterRoom teacherPassword={inputs.teacherPassword}/>)
     }
   }
-  const currentFormObj =  gatherFormInputs()
+
+  const [currentComponent, changeCurrentComponent] = useState(<TypeOfUserForm gatherFormInputs={gatherFormInputs} />)
+  
   return (
     <div style={{ border: "2px solid orange" }} >
-      {currentFormObj.component}
+      {currentComponent}
     </div>
   );
 }
