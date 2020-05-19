@@ -17,8 +17,13 @@ app.post('/rooms', (req,res) => {
 })
 
 app.get('/room', (req, res) => {
-  Room.find(req.body).then((room) => { //req will be numbers of pin
-    res.send(room)
+  Room.find(req.body).then((room) => { //req.body will be {"pin": 11111}
+    console.log(res)
+    // if (res.body === undefined) {
+    //   throw new Error("Room does not exist")
+    // } else {
+      res.send(room)
+    // }
   }).catch((e) => {
     console.log("unnable to GET room::: ", e)
     res.status(500).send(e)
