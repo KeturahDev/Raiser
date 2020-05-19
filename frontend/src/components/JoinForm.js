@@ -19,20 +19,13 @@ function JoinForm() {
   }
 
   const joiningAs = (event) => {
-    // switchForm(event.target.value)
+    switchForm(event.target.value)
     console.log("onChange:", event.target.value)
     renderform(event.target.value)
   }
 
-  // const rerender = () => {
-  //   return {
-  //     component: currentForm
-  //   }
-  // }
-  // const thisform = rerender()
   return(
     <div style={{border: "2px solid orange"}} >
-      {/* <h3>state = {typeOfForm}</h3> */}
       <div>
         <form>
           {/* <input type="text" name="roompin" placeholder="room-pin"/> */}
@@ -44,7 +37,7 @@ function JoinForm() {
               <option value="teacher">Teacher</option>
             </select>
           </label>
-          <button type="submit">submit</button>
+          {/* <button type="submit">submit</button> */}
         </form>
         <hr></hr>
         {currentForm}
