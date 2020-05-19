@@ -13,12 +13,12 @@ function CreateRoom(){
   }
   
   const createRoomApiCall = (newRoom) => {
-    fetch('http://localhost:5000/rooms', 
+    fetch('http://127.0.0.1:5000/rooms', 
     {method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
-    Origin: 'http://localhost:3000',
+    Origin: 'http://127.0.0.1:3000',
     body: JSON.stringify(newRoom)})
     .then(() => {
       console.log("API::: successfully created room")
