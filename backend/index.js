@@ -16,13 +16,14 @@ app.post('/rooms', (req,res) => {
   })
 })
 
-app.get('/rooms', (req, res) => {
-  Room.find({pin: req}).then((room) => { //req will be numbers of pin
+app.get('/room', (req, res) => {
+  Room.find(req.body).then((room) => { //req will be numbers of pin
     res.send(room)
   }).catch((e) => {
     console.log("unnable to GET room::: ", e)
     res.status(500).send(e)
   })
+  // console.log("Got it!  ",req.body)
 })
 
 
