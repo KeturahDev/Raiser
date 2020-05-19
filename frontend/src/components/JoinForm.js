@@ -1,25 +1,12 @@
 import React, { useState } from 'react';
-import StudentForm from './forms/StudentForm'
-import TeacherForm from './forms/TeacherForm'
+// import StudentForm from './forms/StudentForm'
+// import TeacherForm from './forms/TeacherForm'
 import EnterRoom from './forms/EnterRoom'
+import TypeOfUserForm from './forms/TypeOfUserForm';
 
 function JoinForm() {
 
-  const [membershipLable, switchMembershipLable] = useState("(please choose)")
-  const [currentForm, changeFormTo] = useState(<h3> ... </h3>)
-
-  const renderform = (form) => {
-    if (form === "student") {
-      changeFormTo(<StudentForm onSubmittingForm={gatherFormInputs} />)
-    } else if (form === "teacher") {
-      changeFormTo(<TeacherForm onSubmittingForm={gatherFormInputs} />)
-    }
-  }
-
-  const joiningAs = (event) => {
-    switchMembershipLable(event.target.value)
-    renderform(event.target.value)
-  }
+  // const [membershipLable, switchMembershipLable] = useState("(please choose)")
 
   const gatherFormInputs = (inputs) => {
     console.log("recalled", inputs)
@@ -35,29 +22,14 @@ function JoinForm() {
       }
     } else {
       return {
-        component: <div>
-          <form>
-            <label>
-              Join as {membershipLable} :
-                          <select value={"pin-entry"} onChange={joiningAs}>
-                <option value="pin-entry"> - </option>
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
-              </select>
-            </label>
-          </form>
-          <hr></hr>
-          {currentForm}
-        </div>
+        component: <TypeOfUserForm />
       }
     }
   }
   const currentFormObj =  gatherFormInputs()
   return (
     <div style={{ border: "2px solid orange" }} >
-
-    {currentFormObj.component}
-
+      {currentFormObj.component}
     </div>
   );
 }
