@@ -29,8 +29,8 @@ currently have working:
 - components generating pin and password for room model
 
 whats next:
-- accurately fetch end point for posting pin to db
-- create GET endpoint in server, confirm effective
+- accurately fetch end point for posting pin to db X 
+- create GET endpoint in server, confirm effective <==
 - create join form components
 - allow users to join room! = MVP
 - ...

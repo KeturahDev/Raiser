@@ -10,12 +10,18 @@ app.use(express.json())
 app.post('/rooms', (req,res) => {
   const room = new Room(req.body)
   room.save().then(() => {
-    // res.header('Access-Control-Allow-Origin: *')
-    res.send(room)
+    res.status(201).send(room)
   }).catch((e, room) => {
-    console.log('ROOM: ', room)
-    console.log('ERROR: ', e)
     res.status(400).send(e)
+  })
+})
+
+app.get('/rooms', (req, res) => {
+  Room.find({pin: req}).then((room) => { //req will be numbers of pin
+    res.send(room)
+  }).catch((e) => {
+    console.log("unnable to GET room::: ", e)
+    res.status(500).send(e)
   })
 })
 
