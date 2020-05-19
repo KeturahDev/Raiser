@@ -36,6 +36,9 @@ whats next:
 - ...
 - profit!
 
+trach unseen work:
+- attempted to transition component from functional to class, was too messy, undid all changes
+
 
 Progress:
 - learning about CORS and "allow same origin" to enable fetching another local host port
