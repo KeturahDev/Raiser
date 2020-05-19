@@ -19,9 +19,24 @@
 - create and make first insertion to Raisers MongoDB database
 
 
+make sure mongodb is running: *MrComputer:Raiser mac$ /Users/mac/mongodb/bin/mongodb.exe --dbpath=/Users/mac/mongodb-data*
 
-thoughts along the way
-- authorization library? just for password creation -- no
+## [MAY 19th](https://www.youtube.com/watch?v=gVgtq01fN9M)
+currently have working:
+- splash components
+- backend server running
+- backend server connected to mongodb
+- components generating pin and password for room model
+
+whats next:
+- accurately fetch end point for posting pin to db
+- create GET endpoint in server, confirm effective
+- create join form components
+- allow users to join room! = MVP
+- ...
+- profit!
+
+
 
 1. Learning about node servers: https://www.youtube.com/watch?v=VShtPwEkDD0
 2. Researching how to connect to mongodb with node server: https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729150#overview
