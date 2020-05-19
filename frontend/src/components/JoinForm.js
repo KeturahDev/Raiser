@@ -4,22 +4,27 @@ import TeacherForm from './forms/TeacherForm'
 
 function JoinForm() {
 
-  const [typeOfForm, switchForm] = useState("(please choose)")
+  const [membership, switchMembership] = useState("(please choose)")
   const [currentForm, changeFormTo] = useState(<h3> ... </h3>)
   
   const renderform = (form) => {
-    // console.log("in renderForm functoin: ",typeOfForm)
-    // const formType = typeOfForm
     if (form === "student") {
-      changeFormTo(<StudentForm/>)
+      changeFormTo(<StudentForm onSubmittingForm={gatherFormInputs}/>)
     } else if (form === "teacher"){
-      changeFormTo(<TeacherForm/>)
+      changeFormTo(<TeacherForm onSubmittingForm={gatherFormInputs}/>)
     }
-    // rerender()
+  }
+
+  const gatherFormInputs = (submissionObj) => {
+    if(submissionObj.type === "student") {
+      console.log('submit student info: ', submissionObj.studentName)
+    } else {
+      console.log('submit teacher info: ', submissionObj.teacherPassword)
+    }
   }
 
   const joiningAs = (event) => {
-    switchForm(event.target.value)
+    switchMembership(event.target.value)
     console.log("onChange:", event.target.value)
     renderform(event.target.value)
   }
@@ -28,16 +33,14 @@ function JoinForm() {
     <div style={{border: "2px solid orange"}} >
       <div>
         <form>
-          {/* <input type="text" name="roompin" placeholder="room-pin"/> */}
           <label>
-          Join as {typeOfForm} :
+          Join as {membership} :
             <select value={"pin-entry"} onChange={joiningAs}>
               <option value="pin-entry"> - </option>
               <option value="student">Student</option>
               <option value="teacher">Teacher</option>
             </select>
           </label>
-          {/* <button type="submit">submit</button> */}
         </form>
         <hr></hr>
         {currentForm}

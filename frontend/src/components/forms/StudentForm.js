@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 function StudentForm(props){
   const handleSubmit = (event) => {
     event.preventDefault()
-    props.onSubmittingForm(event.target.studentName.value)
+    const submissionObj = {
+      studentName : event.target.studentName.value,
+      type: "student"
+    }
+    props.onSubmittingForm(submissionObj)
   }
   return(
     <div style={{border: "2px solid yellowgreen"}}>
