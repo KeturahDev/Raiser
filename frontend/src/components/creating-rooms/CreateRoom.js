@@ -13,6 +13,7 @@ function CreateRoom(){
   }
   
   const createRoomApiCall = (newRoom) => {
+    console.log('NewRoom: ', newRoom)
     fetch('http://127.0.0.1:5000/rooms', 
     {method: "POST",
     headers: {
@@ -21,6 +22,7 @@ function CreateRoom(){
     Origin: 'http://127.0.0.1:3000',
     body: JSON.stringify(newRoom)})
     .then(() => {
+      console.log('JSONIFIEDROOM: ', JSON.stringify(newRoom))
       console.log("API::: successfully created room")
     }).catch((e) => {
       console.log("Unable to create new room: ", e)
@@ -28,7 +30,7 @@ function CreateRoom(){
   }
 
   const makeRoom = (password) => {
-    const newRoom = { roomPin: number, teacherPassword: password }
+    const newRoom = { pin: number, teacherPassword: password }
     console.log("Room to be saved: ", newRoom)
     createRoomApiCall(newRoom)
     changeVisChildCR("confirm")
