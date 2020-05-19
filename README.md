@@ -52,14 +52,15 @@ As a student, I want to be able to respond to the polls by clicking a number on 
 ## Technologies Used for MVP
  * React
  * MongoDB
+ * Mongoose
  * express
  * Node.js backend
  * Socket.io
- * bluebird promise library
  * git
  * SCSS/CSS
  * [Trello Board](https://trello.com/b/RZ5w1kKV/raiser-app)
  * VisualStudio Code 
+ * Postman
 
  ## Known Bugs
 
