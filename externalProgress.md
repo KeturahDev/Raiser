@@ -37,6 +37,10 @@ whats next:
 - profit!
 
 
+Progress:
+- learning about CORS and "allow same origin" to enable fetching another local host port
+    - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
 
 1. Learning about node servers: https://www.youtube.com/watch?v=VShtPwEkDD0
 2. Researching how to connect to mongodb with node server: https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729150#overview
