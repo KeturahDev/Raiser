@@ -40,6 +40,8 @@ whats next:
 Progress:
 - learning about CORS and "allow same origin" to enable fetching another local host port
     - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+    - https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe
+    - https://www.youtube.com/watch?v=qTi4cMb3dIo
 
 
 1. Learning about node servers: https://www.youtube.com/watch?v=VShtPwEkDD0

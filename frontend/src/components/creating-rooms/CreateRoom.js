@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import GeneratePin from './GeneratePin';
 import Form from './Form';
 import Confirmation from './Confirmation';
@@ -18,6 +18,7 @@ function CreateRoom(){
     headers: {
       "Content-Type": "application/json"
     },
+    Origin: 'http://localhost:3000',
     body: JSON.stringify(newRoom)})
     .then(() => {
       console.log("API::: successfully created room")
