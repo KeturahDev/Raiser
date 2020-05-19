@@ -10,9 +10,11 @@ app.use(express.json())
 app.post('/rooms', (req,res) => {
   const room = new Room(req.body)
   room.save().then(() => {
-    res.header('Access-Control-Allow-Origin: *')
+    console.log('ROOM: ', room)
+    // res.header('Access-Control-Allow-Origin: *')
     res.send(room)
   }).catch((e) => {
+    console.log('ERROR: ', e)
     res.status(400).send(e)
   })
 })
