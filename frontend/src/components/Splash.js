@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Header from './Header';
-import JoinForm from './JoinForm';
+import JoinView from './JoinView';
 import CreateRoom from './creating-rooms/CreateRoom'
 
 function Splash() {
@@ -17,7 +17,7 @@ function Splash() {
   const renderingChild = () => {
     if(visibleChild === "join") {
       return {
-        component: <JoinForm />,
+        component: <JoinView />,
         buttontext: "Create Room"
       } 
     } else {
