@@ -17,8 +17,9 @@ app.post('/rooms', (req,res) => {
 })
 
 app.get('/room', (req, res) => {
-  Room.find(req.body).then((room) => { //req.body will be {"pin": 11111}
-    console.log(res)
+  let pinQ = req.query.pin
+  Room.find({pin: pinQ}).then((room) => { //req.body will be {"pin": 11111}
+    // console.log(res)
     // if (res.body === undefined) {
     //   throw new Error("Room does not exist")
     // } else {
