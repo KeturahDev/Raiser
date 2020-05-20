@@ -29,6 +29,7 @@ class ChooseRoom extends React.Component{
       room
     }
     dispatch(action)
+    console.log("From redux: ",this.props.currentRoom)
     this.props.RoomEntersState(this.props.currentRoom)
   }
 

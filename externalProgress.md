@@ -56,6 +56,7 @@ Whats next:
 helpful sources:
 - [how to use queries in node.js](https://stackabuse.com/get-query-strings-and-parameters-in-express-js/)
 - [CRUD for embedded docs in Mongoose](https://mongoosejs.com/docs/2.7.x/docs/embedded-documents.html)
+- [partnering the above with my existing code](https://stackoverflow.com/questions/37537493/how-to-create-an-embedded-document-that-follows-a-model-with-mongoose)
 
 --------------------------------------------------
 Progress:

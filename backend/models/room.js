@@ -1,14 +1,13 @@
 const mongoose = require('mongoose')
 
-const Room = mongoose.model('Room', {
-  pin: {
-    type: Number,
-    required: true,
-  },
-  roomName: {
-    type: String,
-    required: true
-  },
+const StudentSchema = new Schema({
+  handraised: {type: Boolean, default: false},
+  name: String
+})
+
+const RoomSchema = new Schema({
+  pin: { type: Number, required: true},
+  roomName: { type: String, required: true },
   teacherPassword: {
     type: String,
     required: true,
@@ -19,6 +18,7 @@ const Room = mongoose.model('Room', {
         throw new Error("You cannot have a password containing 'password'.")
       }
     }
-  }
+  },
+  students: [StudentSchema]
 })
-module.exports = Room
+module.exports = mongoose.model('Room', RoomSchema)
