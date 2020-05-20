@@ -47,10 +47,10 @@ Whats next:
 - component for taking in room pin X
 - fetch GET call for rooms X
 - redux implementation to store room obj in state X
-- refactor rooms to take names <==
-- dont display create room on 400 bad request
-- dont allow repition of room-codes (how?)
-- visual representation for being in state: MVP ACHIEVED 
+- refactor rooms to take names X
+- dont display create room on 400 bad request X
+- dont allow repition of room-codes (how?) <== all same fetch for getting room, and if failed, allow creation!!
+- visual representation for being in state: MVP ACHIEVED X !!!! 
 
 helpful sources:
 - [how to use queries in node.js](https://stackabuse.com/get-query-strings-and-parameters-in-express-js/)
