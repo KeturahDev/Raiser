@@ -8,9 +8,10 @@ describe('roomReducer', () => {
   })
   test('should make room the reducers state', () => {
     action = {
-      action: 'ENTER_ROOM',
-      room //hopefully accesses outter const to do shorthand 
+      type: 'ENTER_ROOM',
+      room: room
     }
+    console.log("action= ", action)
     expect(roomReducer({}, action)).toEqual({pin: 11223344, teacherPassword: "blackcat", id:1234})
   })
 })

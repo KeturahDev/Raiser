@@ -1,3 +1,9 @@
 export default (state = [], action) => {
-  return state
+  switch(action.type) {
+    case "ENTER_ROOM":
+      state = action.room
+      return state
+    default:
+      return state
+  }
 }
