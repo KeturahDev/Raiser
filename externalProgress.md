@@ -44,11 +44,13 @@ currently working:
 - post api call for creating rooms
 
 Whats next:
-- component for taking in room pin
-- fetch GET call for rooms
+- component for taking in room pin X
+- fetch GET call for rooms <==
 - redux implementation to store room obj in state
 - visual representation for being in state: MVP ACHIEVED 
 
+helpful sources:
+- [how to use queries in node.js](https://stackabuse.com/get-query-strings-and-parameters-in-express-js/)
 
 --------------------------------------------------
 Progress:

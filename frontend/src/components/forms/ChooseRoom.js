@@ -11,19 +11,17 @@ function ChooseRoom(props){
         pin: roomPin
     })
     console.log("URL   ", url)
-    // fetch(url,
-    // // fetch('http://127.0.0.1:5000/room',
-    // {method: "GET",
-    // headers: {
-    //   "Content-Type": "application/json"
-    // }
-    // // body: JSON.stringify(roomPin)
-    // })
-    // .then((res) => res.json())
-    // .then(jsonifiedRes => {
-    //   console.log("GOT IT:  ", jsonifiedRes)
-    //   pullRoom(jsonifiedRes)
-    // }).catch(error => console.log("Unable to fetch room:  ", error))
+    fetch(url,
+    // fetch('http://127.0.0.1:5000/room',
+    {method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    }})
+    .then((res) => res.json())
+    .then(jsonifiedRes => {
+      console.log("GOT IT:  ", jsonifiedRes)
+      pullRoom(jsonifiedRes)
+    }).catch(error => console.log("Unable to fetch room:  ", error))
   }
 
 
