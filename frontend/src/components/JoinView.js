@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import EnterRoom from './forms/EnterRoom';
-import ChooseRoom from './forms/ChooseRoom';
-import TypeOfUserForm from './forms/TypeOfUserForm';
+import InRoom from './InRoom';
+import ChooseRoom from './joining-rooms/ChooseRoom';
+import TypeOfUserForm from './joining-rooms/TypeOfUserForm';
 
 function JoinView() {
   
   const gatherFormInputs = (inputs) => {
     if(inputs) {
       if (inputs.type === "student") {
-        changeCurrentComponent(<EnterRoom studentName={inputs.studentName}/>)
+        changeCurrentComponent(<InRoom studentName={inputs.studentName}/>)
       } else {
-        changeCurrentComponent(<EnterRoom teacherPassword={inputs.teacherPassword}/>)
+        changeCurrentComponent(<InRoom teacherPassword={inputs.teacherPassword}/>)
       }
     } 
     // else {
