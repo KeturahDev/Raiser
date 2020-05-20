@@ -29,8 +29,8 @@ function CreateRoom(){
     })
   }
 
-  const makeRoom = (password) => {
-    const newRoom = { pin: number, teacherPassword: password }
+  const makeRoom = (inputs) => {
+    const newRoom = { pin: number, roomName: inputs.roomName, teacherPassword: inputs.password }
     console.log("Room to be saved: ", newRoom)
     createRoomApiCall(newRoom)
     changeVisChildCR("confirm")
