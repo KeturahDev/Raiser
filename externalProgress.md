@@ -46,7 +46,10 @@ currently working:
 Whats next:
 - component for taking in room pin X
 - fetch GET call for rooms X
-- redux implementation to store room obj in state <===
+- redux implementation to store room obj in state X
+- refactor rooms to take names <==
+- dont display create room on 400 bad request
+- dont allow repition of room-codes (how?)
 - visual representation for being in state: MVP ACHIEVED 
 
 helpful sources:
