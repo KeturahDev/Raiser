@@ -4,14 +4,30 @@ import Form from './Form';
 import Confirmation from './Confirmation';
 
 function CreateRoom(){
-  const [number, changeNumber] = useState(Math.floor(10000 + Math.random() * 90000))
   const [visChildCR, changeVisChildCR] = useState("form")
   const [confirmationMessage, modifyMessage] = useState("Good to go!")
+  const [number, changeNumber] = useState(Math.floor(10000 + Math.random() * 90000))
 
   function getNumber(){
     const newNum = Math.floor(10000 + Math.random() * 90000)
+    // const newNum = 57556
+    // checkPinExistance(newNum)
     changeNumber(newNum)
   }
+
+  // const checkPinExistance = (pin) => {
+  //   let url = new URL('http://127.0.0.1:5000/room')
+  //   url.search = new URLSearchParams({
+  //       pin
+  //   })
+  //   fetch(url,
+  //     {method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     }})
+  //   .then(getNumber())
+  //   .catch(changeNumber(pin))
+  // }
   
   const createRoomApiCall = (newRoom) => {
     console.log('NewRoom: ', newRoom)

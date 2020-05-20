@@ -9,6 +9,7 @@ app.use(express.json())
 
 app.post('/rooms', (req,res) => {
   const room = new Room(req.body)
+  //conditional here to see if pin is already in db?
   room.save().then(() => {
     res.status(201).send(room)
   }).catch((e) => {
