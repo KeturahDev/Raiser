@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import StudentView from './UserViews/StudentView'
 import TeacherView from './UserViews/TeacherView'
 
 function InRoom(props){
   // const [typeOfUser, userIs] = useState("unknown") //dictate other peices of functionality potentially
-  // const [NEWvisComponentER, changeVisComponentER] = useState(<h3>Loading...</h3>)
 
+  const addStudent = () => {
+    //fetch to POST 
+  }
   const whoDis = () => {
     if(props.studentName) {
       // userIs("student")
-      return {component:<StudentView/>}
+      return {component:<StudentView name={props.studentName}/>}
       // console.log("student")
     } else if (props.teacherPassword) {
       console.log("teacher")
