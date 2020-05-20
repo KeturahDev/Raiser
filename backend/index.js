@@ -11,14 +11,15 @@ app.post('/rooms', (req,res) => {
   const room = new Room(req.body)
   room.save().then(() => {
     res.status(201).send(room)
-  }).catch((e, room) => {
+  }).catch((e) => {
     res.status(400).send(e)
+    throw new Error(e)
   })
 })
 
 app.get('/room', (req, res) => {
   let pinQ = req.query.pin
-  Room.find({pin: pinQ}).then((room) => { //req.body will be {"pin": 11111}
+  Room.find({pin: pinQ}).then((room) => {
     // console.log(res)
     // if (res.body === undefined) {
     //   throw new Error("Room does not exist")
@@ -29,7 +30,6 @@ app.get('/room', (req, res) => {
     console.log("unnable to GET room::: ", e)
     res.status(500).send(e)
   })
-  // console.log("Got it!  ",req.body)
 })
 
 
