@@ -5,6 +5,10 @@ const Room = mongoose.model('Room', {
     type: Number,
     required: true,
   },
+  roomName: {
+    type: String,
+    required: true
+  },
   teacherPassword: {
     type: String,
     required: true,

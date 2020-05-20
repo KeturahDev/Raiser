@@ -30,7 +30,7 @@ function JoinView() {
   return (
     <div style={{ border: "2px solid orange" }} >
     JOIN VIEW
-    <p>Currently in Room: {currentRoom.pin}</p>
+    <p>Currently in Room: {currentRoom.roomName}</p>
       {currentComponent}
     </div>
   );
