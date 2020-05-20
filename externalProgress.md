@@ -51,9 +51,11 @@ Whats next:
 - dont display create room on 400 bad request X
 - dont allow repition of room-codes (how?) <== all same fetch for getting room, and if failed, allow creation!!
 - visual representation for being in state: MVP ACHIEVED X !!!! 
+- create functionality to embed raised hands
 
 helpful sources:
 - [how to use queries in node.js](https://stackabuse.com/get-query-strings-and-parameters-in-express-js/)
+- https://kb.objectrocket.com/mongo-db/how-to-work-with-an-embedded-document-in-a-mongodb-collection-378
 
 --------------------------------------------------
 Progress:
