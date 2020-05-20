@@ -22,7 +22,7 @@ function InRoom(props){
   const visComponent = whoDis()
   return(
     <div style={{border: "2px solid violet"}} >
-      {visComponent}
+      {visComponent.component}
     </div>
   )
 }
