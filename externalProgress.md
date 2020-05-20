@@ -55,7 +55,7 @@ Whats next:
 
 helpful sources:
 - [how to use queries in node.js](https://stackabuse.com/get-query-strings-and-parameters-in-express-js/)
-- https://kb.objectrocket.com/mongo-db/how-to-work-with-an-embedded-document-in-a-mongodb-collection-378
+- [CRUD for embedded docs in Mongoose](https://mongoosejs.com/docs/2.7.x/docs/embedded-documents.html)
 
 --------------------------------------------------
 Progress:
