@@ -21,13 +21,16 @@ function JoinView() {
   const RoomEntersState = (roomPin) => {
     console.log("room to be sent to GET api call: ", roomPin)
     changeCurrentComponent(<TypeOfUserForm gatherFormInputs={gatherFormInputs} />)
+    changeCurrentRoom(roomPin)
   }
 
   const [currentComponent, changeCurrentComponent] = useState(<ChooseRoom RoomEntersState={RoomEntersState} />)
+  const [currentRoom, changeCurrentRoom] = useState("is waiting to be chosen")
 
   return (
     <div style={{ border: "2px solid orange" }} >
     JOIN VIEW
+    <p>Currently in Room: {currentRoom.pin}</p>
       {currentComponent}
     </div>
   );

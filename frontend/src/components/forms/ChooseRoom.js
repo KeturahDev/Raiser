@@ -1,49 +1,59 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux'
 
-function ChooseRoom(props){
-  const [summonedRoom, pullRoom] = useState({})
+class ChooseRoom extends React.Component{
 
-  const getRoom = (roomPin) => {
-    console.log("ROOM PIN: ",roomPin)
+  getRoom = (roomPin) => {
     let url = new URL('http://127.0.0.1:5000/room')
     url.search = new URLSearchParams({
         pin: roomPin
     })
     console.log("URL   ", url)
     fetch(url,
-    // fetch('http://127.0.0.1:5000/room',
-    {method: "GET",
-    headers: {
-      "Content-Type": "application/json"
-    }})
+      {method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }})
     .then((res) => res.json())
     .then(jsonifiedRes => {
       console.log("GOT IT:  ", jsonifiedRes)
-      pullRoom(jsonifiedRes)
+      this.handleRoomEntersState(jsonifiedRes[0])
     }).catch(error => console.log("Unable to fetch room:  ", error))
   }
 
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    // const pinObj = { pin: event.target.pin.value }
-    // console.log("HANDLE FUNC PIN OBJ:  ", pinObj)
-    getRoom(event.target.pin.value)
-    // getRoom(pinObj)
+  handleRoomEntersState = (room) => {
+    const {dispatch} = this.props
+    const action = {
+      type: "ENTER_ROOM",
+      room
+    }
+    dispatch(action)
+    this.props.RoomEntersState(this.props.currentRoom)
   }
-  return(
-    <div style={{border: "2px solid darkred"}}>
-    CHOOSE ROOM
-      <p>Where you enter pin, and room enters state</p>
-      <form onSubmit={handleSubmit}>
-        <input name="pin" placeholder="room pin"/>
-        <button type="submit">Enter Room</button>
-      </form>
-    </div>
-  )
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.getRoom(event.target.pin.value)
+  }
+  render(){
+    return(
+      <div style={{border: "2px solid darkred"}}>
+      CHOOSE ROOM
+        <form onSubmit={this.handleSubmit}>
+          <input name="pin" placeholder="room pin"/>
+          <button type="submit">Enter Room</button>
+        </form>
+      </div>
+    )
+  }
 }
 ChooseRoom.propTypes = {
   RoomEntersState: PropTypes.func
 }
+const mapStateToProps = state => ({
+  currentRoom: state.currentRoom
+})
+ChooseRoom = connect(mapStateToProps)(ChooseRoom)
+
 export default ChooseRoom
