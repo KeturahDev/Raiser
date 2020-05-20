@@ -6,12 +6,27 @@ import TeacherView from './UserViews/TeacherView'
 function InRoom(props){
   // const [typeOfUser, userIs] = useState("unknown") //dictate other peices of functionality potentially
 
-  const addStudent = () => {
-    //fetch to POST 
+  const addStudent = (id, studentObj) => {
+    let url = new URL('http://127.0.0.1:5000/room')
+    url.search = new URLSearchParams({
+      id
+    })
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(studentObj)
+    }).then((response) => {
+      console.log('JSONIFIED STUDENT CREATED: ', JSON.stringify(response))  
+    }).catch((e) => {
+      console.log("Unable to create new student: ", e)
+    })
   }
   const whoDis = () => {
     if(props.studentName) {
       // userIs("student")
+      addStudent(props.currentRoom._id, {name: props.studentName})
       return {component:<StudentView name={props.studentName}/>}
       // console.log("student")
     } else if (props.teacherPassword) {
@@ -30,6 +45,7 @@ function InRoom(props){
 }
 InRoom.propTypes = {
   studentName: PropTypes.string,
-  teacherPassword: PropTypes.string
+  teacherPassword: PropTypes.string,
+  currentRoom: PropTypes.object
 }
 export default InRoom;

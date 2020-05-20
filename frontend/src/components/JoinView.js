@@ -5,10 +5,21 @@ import TypeOfUserForm from './joining-rooms/TypeOfUserForm';
 
 function JoinView() {
   
+  
+  const RoomEntersState = (roomPin) => {
+    console.log("room to be sent to GET api call: ", roomPin)
+    changeCurrentComponent(<TypeOfUserForm gatherFormInputs={gatherFormInputs} />)
+    changeCurrentRoom(roomPin)
+  }
+  
+  const [currentComponent, changeCurrentComponent] = useState(<ChooseRoom RoomEntersState={RoomEntersState} />)
+  const [currentRoom, changeCurrentRoom] = useState("is waiting to be chosen")
+  
   const gatherFormInputs = (inputs) => {
     if(inputs) {
       if (inputs.type === "student") {
-        changeCurrentComponent(<InRoom studentName={inputs.studentName}/>)
+        console.log(currentRoom)
+        changeCurrentComponent(<InRoom currentRoom={currentRoom} studentName={inputs.studentName}/>)
       } else {
         changeCurrentComponent(<InRoom teacherPassword={inputs.teacherPassword}/>)
       }
@@ -17,16 +28,6 @@ function JoinView() {
     //   changeCurrentComponent(<TypeOfUserForm gatherFormInputs={gatherFormInputs} />)
     // }
   }
-
-  const RoomEntersState = (roomPin) => {
-    console.log("room to be sent to GET api call: ", roomPin)
-    changeCurrentComponent(<TypeOfUserForm gatherFormInputs={gatherFormInputs} />)
-    changeCurrentRoom(roomPin)
-  }
-
-  const [currentComponent, changeCurrentComponent] = useState(<ChooseRoom RoomEntersState={RoomEntersState} />)
-  const [currentRoom, changeCurrentRoom] = useState("is waiting to be chosen")
-
   return (
     <div style={{ border: "2px solid orange" }} >
     JOIN VIEW
