@@ -39,7 +39,18 @@ whats next:
 trach unseen work:
 - attempted to transition component from functional to class, was too messy, undid all changes
 
+## May 20th
+currently working:
+- post api call for creating rooms
 
+Whats next:
+- component for taking in room pin
+- fetch GET call for rooms
+- redux implementation to store room obj in state
+- visual representation for being in state: MVP ACHIEVED 
+
+
+--------------------------------------------------
 Progress:
 - learning about CORS and "allow same origin" to enable fetching another local host port
     - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS

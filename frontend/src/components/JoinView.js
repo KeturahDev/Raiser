@@ -27,6 +27,7 @@ function JoinView() {
 
   return (
     <div style={{ border: "2px solid orange" }} >
+    JOIN VIEW
       {currentComponent}
     </div>
   );
