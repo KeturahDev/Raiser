@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+var Schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
   handraised: {type: Boolean, default: false},

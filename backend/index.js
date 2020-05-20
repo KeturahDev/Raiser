@@ -7,6 +7,7 @@ const port = process.env.PORT || 5000
 
 app.use(express.json())
 
+// ROOMS
 app.post('/rooms', (req,res) => {
   const room = new Room(req.body)
   //conditional here to see if pin is already in db?
@@ -30,6 +31,21 @@ app.get('/room', (req, res) => {
   }).catch((e) => {
     console.log("unnable to GET room::: ", e)
     res.status(500).send(e)
+  })
+})
+
+// STUDNETS
+app.post('/room/:id/students', (req, res) => {
+  const _id = (req.params.id)
+  console.log("ID",_id)
+  Room.findById(_id).then((currentRoom) => {
+    currentRoom.students.push(req.body)
+    currentRoom.save().then(()=>{
+      res.status(201).send(currentRoom)
+    })
+  }).catch((e) => {
+    console.log(e)
+    res.status(200).send(e)
   })
 })
 
