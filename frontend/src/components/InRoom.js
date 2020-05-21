@@ -2,15 +2,14 @@ import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import StudentView from './UserViews/StudentView'
 import TeacherView from './UserViews/TeacherView'
+import {useSelector} from 'react-redux'
 
 function InRoom(props){
   // const [typeOfUser, userIs] = useState("unknown") //dictate other peices of functionality potentially
-
+  const roomId = useSelector(state => state.currentRoom._id)
   const addStudent = (id, studentObj) => {
-    let url = new URL('http://127.0.0.1:5000/room')
-    url.search = new URLSearchParams({
-      id
-    })
+
+    let url = new URL(`http://127.0.0.1:5000/room/${id}/students`)
     fetch(url, {
       method: "POST",
       headers: {
@@ -26,7 +25,7 @@ function InRoom(props){
   const whoDis = () => {
     if(props.studentName) {
       // userIs("student")
-      addStudent(props.currentRoom._id, {name: props.studentName})
+      addStudent(roomId, {name: props.studentName})
       return {component:<StudentView name={props.studentName}/>}
       // console.log("student")
     } else if (props.teacherPassword) {
@@ -43,6 +42,7 @@ function InRoom(props){
     </div>
   )
 }
+
 InRoom.propTypes = {
   studentName: PropTypes.string,
   teacherPassword: PropTypes.string,
