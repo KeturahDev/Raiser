@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import StudentView from './UserViews/StudentView'
 import TeacherView from './UserViews/TeacherView'
 import {useSelector} from 'react-redux'
 
 function InRoom(props){
-  // const [typeOfUser, userIs] = useState("unknown") //dictate other peices of functionality potentially
   const roomId = useSelector(state => state.currentRoom._id)
   const addStudent = (id, studentObj) => {
 
@@ -46,6 +45,5 @@ function InRoom(props){
 InRoom.propTypes = {
   studentName: PropTypes.string,
   teacherPassword: PropTypes.string,
-  currentRoom: PropTypes.object
 }
 export default InRoom;

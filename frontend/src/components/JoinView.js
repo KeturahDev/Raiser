@@ -19,7 +19,7 @@ function JoinView() {
     if(inputs) {
       if (inputs.type === "student") {
         console.log(currentRoom)
-        changeCurrentComponent(<InRoom currentRoom={currentRoom} studentName={inputs.studentName}/>)
+        changeCurrentComponent(<InRoom studentName={inputs.studentName}/>)
       } else {
         changeCurrentComponent(<InRoom teacherPassword={inputs.teacherPassword}/>)
       }
