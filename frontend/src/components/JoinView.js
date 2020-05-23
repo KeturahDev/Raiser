@@ -13,7 +13,7 @@ function JoinView() {
   }
   
   const [currentComponent, changeCurrentComponent] = useState(<ChooseRoom RoomEntersState={RoomEntersState} />)
-  const [currentRoom, changeCurrentRoom] = useState("is waiting to be chosen")
+  const [currentRoom, changeCurrentRoom] = useState("none")
   
   const gatherFormInputs = (inputs) => {
     if(inputs) {
@@ -24,14 +24,15 @@ function JoinView() {
         changeCurrentComponent(<InRoom teacherPassword={inputs.teacherPassword}/>)
       }
     } 
-    // else {
-    //   changeCurrentComponent(<TypeOfUserForm gatherFormInputs={gatherFormInputs} />)
-    // }
   }
+  
   return (
-    <div style={{ border: "2px solid orange" }} >
-    JOIN VIEW
-    <p>Currently in Room: {currentRoom.roomName}</p>
+    <div className="padd"  >
+    {
+      currentRoom !== "none" &&
+      <p>Currently in Room: {currentRoom.roomName}</p>
+
+    }
       {currentComponent}
     </div>
   );

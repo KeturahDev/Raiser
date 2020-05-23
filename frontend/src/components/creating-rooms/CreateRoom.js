@@ -57,7 +57,7 @@ function CreateRoom(){
   }
 
   return(
-    <div style={{border: "2px solid purple"}}>
+    <div className="padd">
       <h2>Adding a Room!</h2>
       {
         visChildCR === "form" &&

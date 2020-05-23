@@ -29,7 +29,6 @@ class ChooseRoom extends React.Component{
       room
     }
     dispatch(action)
-    console.log("From redux: ",this.props.currentRoom)
     this.props.RoomEntersState(this.props.currentRoom)
   }
 
@@ -39,8 +38,8 @@ class ChooseRoom extends React.Component{
   }
   render(){
     return(
-      <div style={{border: "2px solid darkred"}}>
-      CHOOSE ROOM
+      <div className="padd">
+      <p>To join a room, enter the room pin:</p>
         <form onSubmit={this.handleSubmit}>
           <input name="pin" placeholder="room pin"/>
           <button type="submit">Enter Room</button>

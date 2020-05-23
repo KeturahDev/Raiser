@@ -30,8 +30,7 @@ function Splash() {
   
   const renderedChild = renderingChild()
   return(
-    <div style={{border: "2px solid blue"}}>
-      <p>this is splash coponent</p>
+    <div style={{ textAlign: "center"}}>
       <Header />
       {renderedChild.component}
       <button onClick={handleClick}>{renderedChild.buttontext}</button>
