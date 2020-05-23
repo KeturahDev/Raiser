@@ -34,10 +34,11 @@ app.get('/room', (req, res) => {
   })
 })
 
-// STUDNETS
+// ================= STUDNETS =================
+
+// creating  
 app.post('/room/:id/students', (req, res) => {
   const _id = (req.params.id)
-  console.log("ID",_id)
   Room.findById(_id).then((currentRoom) => {
     currentRoom.students.push(req.body)
     currentRoom.save().then(()=>{
@@ -49,6 +50,22 @@ app.post('/room/:id/students', (req, res) => {
   })
 })
 
+// handraising
+app.put('room/:id/students/:studentid', (res, req) => {
+  const _id = (req.params.id)
+  const _student_id = (req.params.studentid)
+  Room.findById(_id).then((room) => {
+    room.student.findById(_student_id).then((student) => {
+      console.log("Got student: ", student)
+      res.send("Got student: ", student)
+    }).catch((e) => {
+      res.send("unable to find student", e)
+    })
+  }).catch((e) => {
+    res.send("unable to find room", e) 
+  })
+
+})
 
 app.listen(port, () => {
   console.log('Server is up and ruinning ' + port)
