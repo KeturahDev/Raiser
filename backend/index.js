@@ -51,17 +51,22 @@ app.post('/room/:id/students', (req, res) => {
 })
 
 // handraising
-app.put('room/:id/students/:studentid', (res, req) => {
-  const _id = (req.params.id)
-  const _student_id = (req.params.studentid)
-  Room.findById(_id).then((room) => {
-    room.student.findById(_student_id).then((student) => {
+app.patch('room/5ecab4a703b947065b170052/students/5ecab4cc03b947065b170053', (res, req) => {
+// app.put('room/:id/students/:studentid', (res, req) => {
+  // const _id = (req.params.id)
+  // const _student_id = (req.params.studentid)
+  Room.findById('5ecab4a703b947065b170052').then((room) => {
+    room.Student.findByIdAndUpdate('5ecab4cc03b947065b170053', { handraised: true }).then((student) => {
       console.log("Got student: ", student)
-      res.send("Got student: ", student)
+      return student.CountDocuments({handraised: true}) // res.send("Got student: ", student)
+    }).then((result) => {
+      console.log(result)
     }).catch((e) => {
       res.send("unable to find student", e)
+      console.log("ERROR: ", e)
     })
   }).catch((e) => {
+    console.log("ERROR: ", e)
     res.send("unable to find room", e) 
   })
 

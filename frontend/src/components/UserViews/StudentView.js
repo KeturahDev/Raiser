@@ -6,6 +6,7 @@ class StudentView extends React.Component{
     return(
       <div>
         <p>hello there {this.props.name}!</p>
+        
       </div>
     )
   }

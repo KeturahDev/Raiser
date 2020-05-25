@@ -53,6 +53,9 @@ Whats next:
 - visual representation for being in state: MVP ACHIEVED X !!!! 
 - create functionality to embed raised hands
 
+May 24th
+currently learning how to update off of UDEMY tutorial, on vid 95 Async/Await : https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729220#notes
+
 helpful sources:
 - [how to use queries in node.js](https://stackabuse.com/get-query-strings-and-parameters-in-express-js/)
 - [CRUD for embedded docs in Mongoose](https://mongoosejs.com/docs/2.7.x/docs/embedded-documents.html)
