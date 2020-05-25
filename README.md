@@ -64,6 +64,8 @@ As a student, I want to be able to respond to the polls by clicking a number on 
 
 ### Setup/Installation Requirements
 
+***frontend setup***
+
 1. To review the code and run on your local server, download with one of the two options bewlow:
 
     _In Terminal:_
@@ -71,14 +73,14 @@ As a student, I want to be able to respond to the polls by clicking a number on 
     * Navigate to where you want this application to be saved, i.e.:
     ```cd desktop```
     * Clone the file from GitHub with HTTPS
-    ```git clone https://github.com/keturahdev/raiser```
+    ```git clone https://github.com/keturahdev/Raiser```
     * Open file in your preferred text editor
-    * On Mac: ```open -a {your text editor} raiser```
+    * On Mac: ```open -a {your text editor} Raiser```
     * On Windows: ```raiser```
 
     _Download Manually:_
 
-    * Navigate to https://github.com/keturahdev/raiser.
+    * Navigate to https://github.com/keturahdev/Raiser.
     * Click green "Clone or Download" button.
     * Click "Download ZIP".
     * Click downloaded file to unzip.
@@ -86,10 +88,24 @@ As a student, I want to be able to respond to the polls by clicking a number on 
     * Right click "index.html" and select your preferred browser or text editor.
 
 2. And then run by:
-
-    * _In terminal_, navigate to be within project's directory
-    * type into the command line
+    * _In terminal_, navigate to be within project's "frontend" directory
+    * type into the command line ```npm i```
+    * then type into the command line
     ```npm run start```
+    
+***backened setup***
+*Currently, this site is not yet hosted. In order to experience the full process of this application, install MongoDb with the following instructions*
+
+<small>on Mac OS</small>
+
+1. Go to [this website](https://www.mongodb.com/download-center/community) and in fill out your information, and click download
+2. Go to your downloads, unzip the file, and move it to a more perminant place inside your computer directory, and confirm its named mongodb (such as /Users/{Your_Name})
+3. Within that same directory, create an empty file named "mongodb-data"
+4. Open a termininal, navigate to your outermost directory with ```cd ~```, and run the line ```/Users/{YourName}/mongodb/bin/mongod --dbpath=/Users/{YourName}/mongodb-data```
+5. Then, within this projects backend directory, enter the command line ```node index.js``` to run the backend server
+
+<small>on windows </small>
+* please follow along with [this](https://treehouse.github.io/installation-guides/windows/mongo-windows.html) tutorial to install mongodb 
 
 ## Technologies Used for MVP
 * React
