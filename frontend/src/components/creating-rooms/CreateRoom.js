@@ -10,24 +10,8 @@ function CreateRoom(){
 
   function getNumber(){
     const newNum = Math.floor(10000 + Math.random() * 90000)
-    // const newNum = 57556
-    // checkPinExistance(newNum)
     changeNumber(newNum)
   }
-
-  // const checkPinExistance = (pin) => {
-  //   let url = new URL('http://127.0.0.1:5000/room')
-  //   url.search = new URLSearchParams({
-  //       pin
-  //   })
-  //   fetch(url,
-  //     {method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     }})
-  //   .then(getNumber())
-  //   .catch(changeNumber(pin))
-  // }
   
   const createRoomApiCall = (newRoom) => {
     console.log('NewRoom: ', newRoom)
@@ -53,7 +37,7 @@ function CreateRoom(){
     const newRoom = { pin: number, roomName: inputs.roomName, teacherPassword: inputs.password }
     console.log("Room to be saved: ", newRoom)
     createRoomApiCall(newRoom)
-    changeVisChildCR("confirm")
+    changeVisChildCR("confirm")  
   }
 
   return(
